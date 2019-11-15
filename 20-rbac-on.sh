@@ -11,3 +11,5 @@ source 00-common.sh
 
 # Turn RBAC on
 kubectl apply -f istio-$ISTIO_VERSION/samples/bookinfo/platform/kube/rbac/rbac-config-ON.yaml
+
+istioctl experimental wait ClusterRbacConfig default
