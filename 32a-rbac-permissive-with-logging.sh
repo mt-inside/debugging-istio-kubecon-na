@@ -1,7 +1,5 @@
 source 00-common.sh
 
-set -x
-
 kubectl apply -f istio-$ISTIO_VERSION/samples/bookinfo/platform/kube/rbac/rbac-config-on-permissive.yaml
 
 # The samples directory includes a handler, instance, and rule which log

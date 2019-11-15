@@ -1,7 +1,5 @@
 source 00-common.sh
 
-set -x
-
 kubectl apply -f istio-$ISTIO_VERSION/install/kubernetes/namespace.yaml
 
 helm template istio-$ISTIO_VERSION/install/kubernetes/helm/istio-init --name istio-init --namespace istio-system | kubectl apply -f -

@@ -1,7 +1,5 @@
 source 00-common.sh
 
-set -x
-
 helm template \
     --name istio \
     --namespace istio-system \

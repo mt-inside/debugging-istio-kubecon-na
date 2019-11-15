@@ -7,3 +7,5 @@ set -o nounset
 shopt -s nullglob
 
 source 00-versions.sh
+
+set -x

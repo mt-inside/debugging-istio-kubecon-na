@@ -1,6 +1,6 @@
 source 00-common.sh
 
-set -x
+set +x
 
 # Receiving envoys should accept only mTLS
 # Not stictly necessary, as the default is PERMISSIVE
