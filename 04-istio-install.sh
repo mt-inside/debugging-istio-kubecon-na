@@ -59,4 +59,4 @@ done
 
 set -x
 
-watch -n1 kubectl get pods -A
+watch -n1 kubectl get pods -n istio-system

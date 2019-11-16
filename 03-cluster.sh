@@ -4,4 +4,4 @@ kind create cluster --image kindest/node:$KUBERNETES_VERSION
 
 kubectl config use-context kind-kind
 
-kubectl get nodes
+watch -n1 kubectl get nodes
