@@ -34,7 +34,7 @@ set -x
 $HELM template \
     --name istio \
     --namespace istio-system \
-    --values istio-$ISTIO_VERSION/install/kubernetes/helm/istio/values.yaml \
+    --values istio-$ISTIO_VERSION/install/kubernetes/helm/istio/values-istio-demo.yaml \
     istio-$ISTIO_VERSION/install/kubernetes/helm/istio \
     | kubectl apply -f -
 
