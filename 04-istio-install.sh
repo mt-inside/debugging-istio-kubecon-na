@@ -2,7 +2,7 @@ source 00-common.sh
 
 kubectl apply -f istio-$ISTIO_VERSION/install/kubernetes/namespace.yaml
 
-helm template istio-$ISTIO_VERSION/install/kubernetes/helm/istio-init --name istio-init --namespace istio-system | kubectl apply -f -
+helm template istio-$ISTIO_VERSION/install/kubernetes/helm/istio-init --namespace istio-system | kubectl apply -f -
 
 set +x
 
@@ -32,7 +32,6 @@ set -x
 # We could also for values.yaml with a few minor things from values-istio-demo.yaml:
 # * Sensible requests for things, especially Pilot
 $HELM template \
-    --name istio \
     --namespace istio-system \
     --values istio-$ISTIO_VERSION/install/kubernetes/helm/istio/values-istio-demo.yaml \
     istio-$ISTIO_VERSION/install/kubernetes/helm/istio \
