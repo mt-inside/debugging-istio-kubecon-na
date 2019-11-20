@@ -1,4 +1,5 @@
 cat imgs.txt | while read i
 do
-    docker save $i > img/$(basename $i)
+    docker pull $i
+    #docker save $i > img/$(basename $i)
 done
